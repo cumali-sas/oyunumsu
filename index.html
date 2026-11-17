@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c1026">
+<title>Ahmet × Zümra — Our Little Universe</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--bg:#0b1025;--panel:#171c39;--pink:#ff9dce;--blue:#8bc8ff;--text:#fff7fc;--muted:#c5cbe0;--line:#ffffff24;--glow:0 0 34px #f68dc855}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 10% 5%,#34477d88,transparent 36%),radial-gradient(ellipse at 90% 70%,#883c7770,transparent 40%),linear-gradient(145deg,#0b1025,#191735 60%,#24142e)}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:30;overflow:hidden}.petal{position:absolute;top:-30px;color:#ffb8db;opacity:.65;animation:fall linear infinite;text-shadow:0 0 9px #ff9dce}@keyframes fall{to{transform:translate3d(50px,110vh,0) rotate(540deg);opacity:0}}
+header{position:sticky;top:0;z-index:20;background:#0b1025d9;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:72px;max-width:1400px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-weight:800;letter-spacing:.08em;white-space:nowrap}.logo b{color:var(--pink)}.logo small{font-weight:500;color:#b9c1db;letter-spacing:.04em}
+.navlinks{display:flex;align-items:center;gap:5px}.navlinks button,.music{border:1px solid transparent;background:transparent;color:#e9eafa;padding:10px 13px;border-radius:99px;font:600 .85rem 'DM Sans';cursor:pointer}.navlinks button:hover,.music:hover{border-color:#ffffff2a;background:#ffffff10}.music{border-color:var(--line);white-space:nowrap}
+main{max-width:1400px;margin:auto;padding:0 26px 50px}
+.hero{position:relative;min-height:570px;margin:26px 0 22px;border-radius:28px;overflow:hidden;border:1px solid #ffffff35;box-shadow:0 28px 90px #0007;background:#171a3b}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 37%;filter:saturate(1.12)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c1025a8 0%,#0c102520 45%,#0c102570 100%),linear-gradient(0deg,#0b1025a8,transparent 40%)}
+.hero-content{position:relative;z-index:2;min-height:570px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;padding:50px clamp(25px,6vw,90px);max-width:100%}
+.kicker{font-size:.7rem;font-weight:800;letter-spacing:.25em;color:var(--pink);text-transform:uppercase}
+.hero h1{font:600 clamp(3rem,7vw,6.4rem)/.98 'Playfair Display';margin:14px 0 12px;text-shadow:0 5px 30px #0008}.hero h1 span:first-child{color:#ff9ed4}.hero h1 span:last-child{color:#92caff}
+.hero p{max-width:490px;color:#fff0fa;font:italic clamp(1.05rem,2vw,1.4rem)/1.65 'Playfair Display';margin:0 0 25px;text-shadow:0 2px 12px #000}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:99px;padding:14px 23px;background:linear-gradient(100deg,var(--blue),var(--pink));color:#11162d;font-weight:800;font-size:.95rem;cursor:pointer;box-shadow:var(--glow);transition:.22s}.btn:hover{transform:translateY(-3px);filter:brightness(1.08);box-shadow:0 0 48px #f68dc877}.btn.secondary{background:#ffffff12;color:#fff;border:1px solid #ffffff35;box-shadow:none}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin:48px 2px 17px;gap:20px}.section-title h2{font:600 clamp(1.8rem,4vw,2.7rem) 'Playfair Display';margin:5px 0}.section-title p{color:var(--muted);margin:0;max-width:530px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.tile{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#ffffff13,#ffffff05);min-height:230px;box-shadow:0 16px 45px #0003;transition:.25s}.tile:hover{transform:translateY(-4px);border-color:#ffabd477;box-shadow:0 20px 50px #0005,0 0 25px #f49acb22}.tile img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:.45s}.tile:hover img{transform:scale(1.045)}.tile:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0b1025ed,transparent 80%)}.tile-copy{position:absolute;z-index:2;bottom:0;left:0;right:0;padding:21px}.tile-copy h3{font:600 1.45rem 'Playfair Display';margin:0 0 7px}.tile-copy p{font-size:.86rem;color:#d9dced;line-height:1.55;margin:0 0 13px;max-width:520px}.tile-copy button{background:#ffffff18;border:1px solid #ffffff50;color:#fff;border-radius:99px;padding:9px 14px;font-weight:700;cursor:pointer}
+.story-tile{grid-column:span 4}.car-tile{grid-column:span 5}.gift-tile{grid-column:span 3}.feature-tile{grid-column:span 4}.turtle-tile{grid-column:span 4}.memory-tile{grid-column:span 4}
+.story-tile img,.car-tile img,.gift-tile img,.feature-tile img,.turtle-tile img,.memory-tile img{object-fit:cover}
+.story-tile img{object-position:center}.car-tile img{object-position:center}.gift-tile img{object-position:center}
+.feature-tile .tile-copy,.turtle-tile .tile-copy,.memory-tile .tile-copy{padding:18px}
+.feature-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.feature-list span{font-size:.72rem;padding:6px 9px;border:1px solid #ffffff3a;background:#10152b99;border-radius:99px}
+footer{padding:35px 10px 20px;text-align:center;color:#aeb7d0;font-size:.85rem}footer strong{color:var(--pink)}
+/* game overlay */
+.overlay{position:fixed;inset:0;z-index:50;background:#070b1beF;backdrop-filter:blur(16px);display:none;align-items:center;justify-content:center;padding:18px;overflow:auto}.overlay.open{display:flex}
+.game{width:min(1000px,100%);border:1px solid #ffffff35;border-radius:25px;overflow:hidden;background:#151a36;box-shadow:0 30px 110px #000b;animation:pop .3s ease}@keyframes pop{from{opacity:0;transform:translateY(15px) scale(.985)}to{opacity:1;transform:none}}
+.game-top{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#0e142c;border-bottom:1px solid var(--line)}.game-top strong{letter-spacing:.06em}.game-top button{background:#ffffff12;border:1px solid var(--line);color:white;border-radius:50%;width:38px;height:38px;font-size:1.2rem;cursor:pointer}
+.game-image{height:clamp(230px,42vw,430px);position:relative;background:#242b50}.game-image img{width:100%;height:100%;object-fit:cover;display:block}.game-image:after{content:"";position:absolute;inset:50% 0 0;background:linear-gradient(transparent,#11162eee)}
+.chapter-tag{position:absolute;top:15px;left:15px;z-index:2;padding:8px 12px;border-radius:99px;background:#11162dcc;border:1px solid #ffffff4a;font-size:.72rem;letter-spacing:.1em}
+.dialogue{padding:23px clamp(18px,4vw,36px) 28px}.speaker{display:flex;align-items:center;gap:10px;color:var(--pink);font-weight:800}.speaker .avatar{width:35px;height:35px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--pink));color:#141a34}.dialogue-text{font:500 clamp(1.05rem,2vw,1.3rem)/1.75 'DM Sans';min-height:72px;margin:13px 0 18px;color:#fff8fd}.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.choice{border:1px solid #ffffff35;background:#ffffff0b;color:white;padding:13px 15px;border-radius:13px;text-align:left;cursor:pointer;font:600 .9rem 'DM Sans';transition:.2s}.choice:hover{border-color:var(--pink);background:#f49acb1c;transform:translateY(-2px)}.game-controls{display:flex;justify-content:space-between;gap:10px;margin-top:20px}.progress{height:4px;background:#ffffff18}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--pink));transition:.3s}
+#toast{position:fixed;z-index:70;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#ffc0df;color:#14172e;padding:12px 18px;border-radius:99px;font-weight:800;transition:.25s;pointer-events:none}#toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.nav{padding:0 16px}.navlinks{display:none}.hero,.hero-content{min-height:490px}.hero-content{align-items:center;text-align:center;background:#0b102544}.story-tile,.car-tile,.gift-tile,.feature-tile,.turtle-tile,.memory-tile{grid-column:span 6}.gift-tile{grid-column:span 6}}
+@media(max-width:560px){main{padding:0 13px 30px}.nav{height:62px}.logo small{display:none}.hero{margin-top:13px;min-height:470px}.hero-content{min-height:470px;padding:30px 18px}.hero>img{object-position:43% center}.grid{gap:10px}.story-tile,.car-tile,.gift-tile,.feature-tile,.turtle-tile,.memory-tile{grid-column:span 12;min-height:225px}.section-title{display:block;margin-top:35px}.section-title p{margin-top:8px}.choices{grid-template-columns:1fr}.game-image{height:250px}.overlay{padding:8px}.game{border-radius:17px}.dialogue{padding:18px}.music{font-size:.78rem;padding:9px 11px}}
+</style>
+</head>
+<body>
+<div id="petals"></div>
+<header><nav class="nav">
+ <div class="logo">AHMET <b>♥</b> ZÜMRA <small> / OUR LITTLE UNIVERSE</small></div>
+ <div class="navlinks"><button onclick="scrollToId('top')">Ana Sayfa</button><button onclick="scrollToId('story')">Hikâyemiz</button><button onclick="scrollToId('gifts')">Hediyeler</button><button onclick="openGame(0)">Oyun</button></div>
+ <button class="music" id="musicBtn" onclick="toggleMusic()">♫ Piyano: Kapalı</button>
+</nav></header>
+<main id="top">
+<section class="hero">
+ <img src="assets/hero.jpg" alt="Ahmet ve Zümra, gece ışıkları altında anime tarzında">
+ <div class="hero-content"><div class="kicker">AN INTERACTIVE LOVE STORY</div><h1><span>Ahmet</span> ♥ <span>Zümra</span></h1><p>İki yabancı, bir el sıkışma…<br>Ve başlayan kocaman bir hikâye.</p><button class="btn" onclick="openGame(0)">▶ Oyuna Başla <span>♡</span></button></div>
+</section>
+<div class="section-title" id="story"><div><div class="kicker">OUR STORY</div><h2>Birlikte yazılan anlar</h2></div><p>Her bölüm, sizin hikâyenizden ilham alan ayrı bir anime sahnesi. Tıkla, sahneye gir ve anıları yeniden yaşa.</p></div>
+<section class="grid">
+ <article class="tile story-tile"><img src="assets/story.jpg" alt="Okul çıkışı, gün batımı anime sahnesi"><div class="tile-copy"><h3>İlk karşılaşma</h3><p>Okul çıkışı sorulan küçücük bir soru ve unutulmayan ilk el sıkışma.</p><button onclick="openGame(0)">Hikâyeyi keşfet →</button></div></article>
+ <article class="tile car-tile"><img src="assets/silvia.jpg" alt="Nissan Silvia S15 model araba, gece garajında"><div class="tile-copy"><h3>Nissan Silvia S15</h3><p>Tokyo Drift ruhundan, Ahmet'in koleksiyonundan Zümra'ya özel bir hediye.</p><button onclick="openGame(3)">Arabayı keşfet →</button></div></article>
+ <article class="tile gift-tile" id="gifts"><img src="assets/gifts.jpg" alt="Çikolata, çiçek, iskambil ve Spider-Man temalı hediye"><div class="tile-copy"><h3>Özel hediyeler</h3><p>Çikolatalar, çiçekler, kartlar ve daha fazlası.</p><button onclick="openGame(2)">Hediyeleri gör →</button></div></article>
+ <article class="tile feature-tile"><img src="assets/features.jpg" alt="Anime Zümra portresi"><div class="tile-copy"><h3>Oyun özellikleri</h3><p>Her sahnede yeni bir diyalog, seçim ve anı.</p><div class="feature-list"><span>Anime sahneleri</span><span>İnteraktif hikâye</span><span>Romantik atmosfer</span><span>Özel hediyeler</span></div></div></article>
+ <article class="tile turtle-tile"><img src="assets/turtle-tea.jpg" alt="Kaplumbağa ve çay temalı sevimli anime sahnesi"><div class="tile-copy"><h3>Biraz çay, biraz kaplumbağa 🐢</h3><p>Sadece ikinizin anlayacağı şakalar. Küçük evreninizin en tatlı köşesi.</p><button onclick="openGame(7)">Bu anıya git →</button></div></article>
+ <article class="tile memory-tile"><img src="assets/memories.jpg" alt="Birlikte yaşanan anıların anime kolajı"><div class="tile-copy"><h3>Anı galerisi</h3><p>Hikâyenin bütün sahneleri tek bir yerde.</p><button onclick="openGame(8)">Anıları gör →</button></div></article>
+</section>
+<footer>Made with care for <strong>Ahmet & Zümra</strong> · Our Little Universe ♡<br><span style="opacity:.7">Bir el sıkışmayla başlayan küçük evren.</span></footer>
+</main>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Hikâye oyunu">
+ <div class="game"><div class="game-top"><strong>✦ OUR LITTLE UNIVERSE <span style="color:var(--pink)">/ STORY MODE</span></strong><button onclick="closeGame()" aria-label="Oyunu kapat">×</button></div>
+ <div class="progress"><span id="progress"></span></div>
+ <div class="game-image"><span class="chapter-tag" id="chapterTag">CHAPTER 01</span><img id="sceneImg" src="assets/story.jpg" alt="Hikâye sahnesi"></div>
+ <div class="dialogue"><div class="speaker"><span class="avatar" id="avatar">✦</span><span id="speaker">Anlatıcı</span></div><div class="dialogue-text" id="line"></div><div class="choices" id="choices"></div>
+ <div class="game-controls"><button class="btn secondary" onclick="backLine()">← Geri</button><button class="btn" id="continue" onclick="advance()">Devam Et →</button></div></div>
+ </div>
+</div>
+<div id="toast">Anı kaydedildi ♡</div>
+<script>
+const chapters=[
+ {name:"O ilk merhaba",img:"story.jpg",lines:[
+  ["Anlatıcı","Okul çıkışı. Günün kalabalığı dağılırken Ahmet, Zümra'nın yanına doğru yürür."],
+  ["Ahmet","Yeni mi geldin?"],
+  ["Zümra","Evet."],
+  ["Anlatıcı","Sonra el sıkışırlar. Ahmet için bu birkaç saniyelik an, zaman geçse de unutulmayacak kadar özeldir."],
+  ["Anlatıcı","Bazen bir hikâye, küçücük bir merhaba ile başlar."]
+ ],end:"Bu ilk el sıkışmayı anılarıma ekle ♡"},
+ {name:"Bir hafta sonra",img:"story.jpg",lines:[
+  ["Anlatıcı","Bir hafta geçer. Ahmet'in aklında Zümra'nın çizdiği kavanoz vardır. Sonunda ona mesaj atar."],
+  ["Ahmet","Bugün çizdiğin kavanoz çok iyiydi, nası çiziyosun?"],
+  ["Anlatıcı","Kavanozu beğenen ve bunu söyleyen Ahmet'tir. İlk mesajın devamındaki gerçek konuşmayı ise burada uydurmuyoruz; o satırlar yalnızca size ait."],
+  ["Anlatıcı","Küçücük bir mesaj, yeni bir sayfanın başlangıcı."]
+ ],end:"İlk mesaj anısını kaydet ♡"},
+ {name:"Antep fıstıklı çikolatalar",img:"gifts.jpg",lines:[
+  ["Anlatıcı","Birbirinizi daha çok tanıdıkça Ahmet, Zümra'yı mutlu edecek küçük sürprizler düşünür."],
+  ["Ahmet","Bunları senin için aldım."],
+  ["Anlatıcı","Antep fıstıklı çikolatalar… Küçük bir hediye ama içinde kocaman bir düşünce var."],
+  ["Anlatıcı","Bazen en tatlı şey, birinin seni düşünerek seçtiği küçücük bir ayrıntıdır."]
+ ],end:"Çikolata anısını sakla ♡"},
+ {name:"Nissan Silvia S15",img:"silvia.jpg",lines:[
+  ["Anlatıcı","Ahmet'in araba koleksiyonunda özel bir model vardır: Fast & Furious: Tokyo Drift ruhunu taşıyan Nissan Silvia S15."],
+  ["Ahmet","Koleksiyonumdan sana özel bir parça."],
+  ["Anlatıcı","Ahmet, sevdiği bir şeyi Zümra ile paylaşır. Bu yalnızca bir model araba değil; kendi dünyasından bir hatıradır."],
+  ["Anlatıcı","Sevdiğin bir şeyi, değer verdiğin biriyle paylaşmak…"]
+ ],end:"Silvia anısını kaydet ♡"},
+ {name:"Çatı katında sihir",img:"gifts.jpg",lines:[
+  ["Anlatıcı","Okulun çatı katında Ahmet'in küçük bir sürprizi vardır. Elinde bir deste iskambil kartı…"],
+  ["Ahmet","Bu numara senin için."],
+  ["Anlatıcı","Kartlar birer birer değişirken, asıl sihir o anı Zümra için hazırlamış olmaktır."],
+  ["Anlatıcı","Bir deste kart, bir çatı katı ve ikinize ait bir hatıra."]
+ ],end:"Sihir anısını kaydet ♡"},
+ {name:"Sana özel çiçekler",img:"gifts.jpg",lines:[
+  ["Anlatıcı","Ahmet hazır bir şey almak yerine kendi çizgileriyle Zümra'ya özel bir çiçek demeti hazırlar."],
+  ["Ahmet","Bunu senin için çizdim."],
+  ["Anlatıcı","Kâğıt üzerinde bir çiçek demeti… ama düşüncesi kalpten."],
+  ["Anlatıcı","Her çizginin içinde, ona ayrılmış biraz zaman vardır."]
+ ],end:"Çiçek anısını kaydet ♡"},
+ {name:"Spider-Man sürprizi",img:"gifts.jpg",lines:[
+  ["Anlatıcı","Zümra için özel tasarlatılan Spider-Man temalı telefon kılıfı, bir başka kişisel sürprizdir."],
+  ["Ahmet","Tam sana göre olsun istedim."],
+  ["Anlatıcı","Kırmızı ve mavi detaylar, sevdiği bir temayı her gün yanında taşıyacağı bir hatıraya dönüştürür."],
+  ["Anlatıcı","Hediyenin güzelliği kadar, seçerken onu düşünmüş olmak da önemlidir."]
+ ],end:"Telefon kılıfı anısını kaydet ♡"},
+ {name:"Bizim küçük şakalarımız",img:"turtle-tea.jpg",lines:[
+  ["Anlatıcı","Her ikilinin kendine ait bir dili vardır. Sizinkinde bir kaplumbağa terbiyecisi var…"],
+  ["Zümra","Kaplumbağa terbiyecisi! 🐢"],
+  ["Ahmet","Çay mı? ☕"],
+  ["Anlatıcı","Dışarıdan bakana küçük bir şaka. İkinizeyse birlikte gülümsemek için güzel bir sebep."]
+ ],end:"Bu küçük şakaları sakla ♡"},
+ {name:"Henüz bitmedi…",img:"memories.jpg",lines:[
+  ["Anlatıcı","Bir okul çıkışında başlayan hikâye; mesajlarla, sürprizlerle ve küçük şakalarla anılara dönüştü."],
+  ["Anlatıcı","Bir el sıkışma, bir kavanoz çizimi, Antep fıstıklı çikolatalar, bir Silvia S15, kartlar, çiçekler ve Spider-Man…"],
+  ["Anlatıcı","Bütün bunların arasında, sadece ikinizin anlayacağı küçük bir evren."],
+  ["Anlatıcı","Bu bir son değil. En güzel sayfalar henüz yaşanmadı. ♡"]
+ ],end:"Hikâyeyi baştan yaşa ↻"}
+];
+let ci=0,li=0,saved=new Set();
+const el=id=>document.getElementById(id);
+function openGame(i){ci=Math.max(0,Math.min(i,chapters.length-1));li=0;el('overlay').classList.add('open');document.body.style.overflow='hidden';render()}
+function closeGame(){el('overlay').classList.remove('open');document.body.style.overflow=''}
+function render(){let c=chapters[ci],l=c.lines[li];el('chapterTag').textContent='CHAPTER '+String(ci+1).padStart(2,'0')+' · '+c.name.toUpperCase();el('sceneImg').src='assets/'+c.img;el('sceneImg').alt=c.name;el('speaker').textContent=l[0];el('avatar').textContent=l[0]==='Ahmet'?'A':l[0]==='Zümra'?'Z':'✦';el('line').textContent=l[1];el('progress').style.width=((ci+(li+1)/c.lines.length)/chapters.length*100)+'%';el('continue').textContent=li===c.lines.length-1?(ci===chapters.length-1?'Yeniden başla ↻':'Sonraki bölüm →'):'Devam Et →';el('choices').innerHTML='';if(li===c.lines.length-1){let b=document.createElement('button');b.className='choice';b.textContent=saved.has(ci)?'♡ Bu anı kaydettin':'♡ '+c.end;b.onclick=()=>{if(ci===chapters.length-1){ci=0;li=0}else{saved.add(ci);toast('Anı galerine eklendi ♡')}render()};el('choices').appendChild(b)}}
+function advance(){if(li<chapters[ci].lines.length-1){li++;render()}else if(ci<chapters.length-1){ci++;li=0;render()}else{ci=0;li=0;render()}}
+function backLine(){if(li>0){li--;render()}else if(ci>0){ci--;li=chapters[ci].lines.length-1;render()}}
+let toastTimer;function toast(t){el('toast').textContent=t;el('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el('toast').classList.remove('show'),1700)}
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGame();if(e.key==='ArrowRight'&&el('overlay').classList.contains('open'))advance()});
+for(let i=0;i<24;i++){let p=document.createElement('span');p.className='petal';p.textContent=['✿','✧','♡'][i%3];p.style.left=Math.random()*100+'%';p.style.animationDuration=(9+Math.random()*12)+'s';p.style.animationDelay=(Math.random()*12)+'s';p.style.fontSize=(10+Math.random()*13)+'px';el('petals').appendChild(p)}
+// Soft original piano-like ambient notes generated in-browser; starts only after a click.
+let ac=null,gain=null,music=false,timer=null;
+function note(f,t,d,v){let o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(gain);o.start(t);o.stop(t+d+.02)}
+function musicPhrase(){if(!music)return;let t=ac.currentTime;[[261.63,329.63,392],[220,261.63,329.63],[174.61,220,261.63],[196,246.94,293.66]].forEach((c,i)=>c.forEach(f=>note(f,t+i*1.6,2.8,.012)));[523.25,493.88,440,392,440,493.88,523.25,587.33].forEach((f,i)=>note(f,t+i*.8,1.4,.017));timer=setTimeout(musicPhrase,6500)}
+async function toggleMusic(){if(!ac){ac=new(window.AudioContext||window.webkitAudioContext)();gain=ac.createGain();gain.gain.value=.65;gain.connect(ac.destination)}if(ac.state==='suspended')await ac.resume();music=!music;if(music){musicPhrase();el('musicBtn').textContent='♫ Piyano: Açık'}else{clearTimeout(timer);gain.gain.setTargetAtTime(.0001,ac.currentTime,.08);setTimeout(()=>{if(!music)gain.gain.value=.65},500);el('musicBtn').textContent='♫ Piyano: Kapalı'}}
+</script>
+</body></html>
